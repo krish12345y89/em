@@ -1,127 +1,177 @@
-### **Basic Concepts Samajh (Theory in Short)**
+## **📗 UNIT 1: Force Systems & Equilibrium**
 
-1.  **Particle:** Ek aisa point jahan saara mass concentrate hai. Iska size matter nahi karta.
-2.  **Equilibrium:** Jab kisi particle ya body par net force zero hoti hai, toh woh rest mein ya constant velocity se move karti hai. Humare liye, mostly rest ki baat hoti hai.
-    - **Condition:** ΣF = 0 (Sum of all forces = 0)
-3.  **Rigid Body:** Ek aisi body jo force lagne se deform nahi hoti.
-4.  **Coplanar Concurrent Forces:** Saari forces ek hi plane mein hoti hain aur ek hi point par meet karti hain.
-5.  **Moment of a Force:** Ye force ka "rotational effect" hota hai. **Moment = Force × Perpendicular Distance**
-6.  **Couple:** Do equal, parallel, aur opposite forces jo ek hi body par act karein, lekin different points se. Ye pure body ko sirf rotate karta hai, translate nahi.
-7.  **Free Body Diagram (FBD):** Kisi body ko uske surroundings se alag karke, ussi par lagne waali saari forces ko dikhane wala diagram. Ye sabse important step hai.
-8.  **Equations of Equilibrium (Coplanar Systems):**
-    - ΣFx = 0 (Horizontal forces ka sum zero)
-    - ΣFy = 0 (Vertical forces ka sum zero)
-    - ΣMabout any point = 0 (Kisi bhi point ke around moments ka sum zero)
+### **1. Coplanar Concurrent Forces**
+**Problem:** Two forces P = 100 N at 30° and Q = 150 N at 60° act at a point. Find resultant.
+
+**Solution:**
+```
+Step 1: Resolve forces
+Pₓ = 100 × cos30° = 86.60 N
+Pᵧ = 100 × sin30° = 50.00 N
+Qₓ = 150 × cos60° = 75.00 N  
+Qᵧ = 150 × sin60° = 129.90 N
+
+Step 2: Find resultant
+Rₓ = 86.60 + 75.00 = 161.60 N
+Rᵧ = 50.00 + 129.90 = 179.90 N
+R = √(161.60² + 179.90²) = 241.70 N
+θ = tan⁻¹(179.90/161.60) = 48.0°
+```
+**Answer:** Resultant = 241.7 N at 48.0°
 
 ---
 
-### **Basic Numericals (Step-by-Step)**
-
-**Numerical 1: Particle Equilibrium (2-D) - Concurrent Forces**
-
-**Problem:** Ek 10 kg ka lamp ek vertical se 30° angle par do wires se latka hua hai. Dono wires mein tension (T1 aur T2) find karo.
-
-```
-   A
-  / \
- /   \
-/  30°\
-T1   T2
- \     /
-  \   /
-   \ /
-    O (Lamp, W = m*g)
-```
+### **2. Rigid Body Equilibrium**  
+**Problem:** A 5m ladder weighs 200 N, leans at 60° to wall. Find reactions at wall and ground.
 
 **Solution:**
-1.  **Free Body Diagram (FBD):** Lamp (Point O) par teen forces hain:
-    - Weight (W) = m*g = 10 * 9.8 = 98 N, vertically downward.
-    - Tension T1, wire A-O mein, left side, 30° vertical ke saath.
-    - Tension T2, wire B-O mein, horizontally right side. (Maan liya ye horizontal hai simplicity ke liye).
+```
+Step 1: FBD - Weight at center, reactions at ends
+Step 2: Take moments about ground contact
+Moment due to weight = 200 × 2.5 × cos60° = 250 Nm
+Moment due to wall reaction = R_wall × 5 × sin60° = R_wall × 4.33
 
-2.  **Equilibrium Equations Lagao:**
-    - **ΣFx = 0:** (Forces in x-direction)
-        T1 * sin(30°) - T2 = 0 ...(Equation 1)
-    - **ΣFy = 0:** (Forces in y-direction)
-        T1 * cos(30°) - 98 = 0 ...(Equation 2)
-
-3.  **Solve Karo:**
-    - Equation 2 se: T1 * cos(30°) = 98
-        T1 = 98 / cos(30°) = 98 / (√3/2) ≈ 98 / 0.866 ≈ **113.2 N**
-    - Equation 1 se: T2 = T1 * sin(30°) = 113.2 * 0.5 ≈ **56.6 N**
-
-**Final Answer:** T1 ≈ 113.2 N, T2 ≈ 56.6 N
+Step 3: Equilibrium equations
+ΣM = 0: R_wall × 4.33 = 250 ⇒ R_wall = 57.74 N
+ΣFy = 0: R_ground_y = 200 N  
+ΣFx = 0: R_ground_x = R_wall = 57.74 N
+```
+**Answer:** Wall reaction = 57.74 N, Ground reaction = 208.2 N at 74°
 
 ---
 
-**Numerical 2: Rigid Body Equilibrium & Moment**
+## **📘 UNIT 2: Vectors & Tensors**
 
-**Problem:** Ek 4m lambe beam ke left end (Point A) par ek hinge support hai aur right end (Point B) par a roller support hai. Beam par 2m doori par left end se, ek 200 N ka vertical load downward lag raha hai. Dono supports ke reactions (RA aur RB) find karo.
-
-```
-A (Hinge)        C          B (Roller)
-|----------------|-----------|
-       2m            2m
-       ↓
-      200 N
-```
+### **3. Vector Cross Product**
+**Problem:** Find cross product of A = 3i + 2j + k and B = i - j + 2k
 
 **Solution:**
-1.  **FBD:** Beam ka FBD banao.
-    - Point A par: Ek reaction force RA, jiske components honge (RAx horizontal, RAy vertical). (Ya fir hum maan sakte hain ki RA ek resultant force hai jo koi bhi angle par ho sakti hai).
-    - Point B par: Roller support sirf vertical reaction de sakta hai, isliye RB purely vertical upward hoga.
-    - Load: 200 N downward at point C.
-
-2.  **Equilibrium Equations Lagao (Coplanar System):**
-    - **ΣFx = 0:** RAx = 0 ...(Koi horizontal force nahi hai, isliye RAx zero hoga).
-    - **ΣMabout A = 0:** (Moment ka equation lagao, kyun ki isse direct RB mil jayega).
-        (RB * 4) - (200 * 2) = 0
-        Positive moment (Anti-clockwise) liya hai.
-    - **ΣFy = 0:** RAy + RB - 200 = 0
-
-3.  **Solve Karo:**
-    - Moment equation se: RB * 4 = 400 => RB = 400 / 4 = **100 N (Upward)**
-    - ΣFy se: RAy + 100 - 200 = 0 => RAy = 200 - 100 = **100 N (Upward)**
-
-**Final Answer:** Reaction at A (RA) = 100 N (Vertical), Reaction at B (RB) = 100 N (Vertical)
+```
+A × B = |i   j   k|
+        |3   2   1|
+        |1  -1   2|
+        
+= i(2×2 - 1×(-1)) - j(3×2 - 1×1) + k(3×(-1) - 2×1)
+= i(4 + 1) - j(6 - 1) + k(-3 - 2)
+= 5i - 5j - 5k
+```
+**Answer:** 5i - 5j - 5k
 
 ---
 
-**Numerical 3: Couple ka Concept**
-
-**Problem:** Ek steering wheel par do forces lagi hain, dono 20 N ki, parallel aur opposite, jinki lines of action ke beech ki perpendicular distance 0.3m hai. Resultant Couple Moment calculate karo.
+### **4. Tensor Eigenvalues**
+**Problem:** Find eigenvalues of tensor T = [[2,1],[1,2]]
 
 **Solution:**
-1.  **Concept:** Couple Moment = Force × Perpendicular Distance between forces.
-2.  **Calculation:** Moment = 20 N × 0.3 m = **6 N·m**
-3.  **Direction:** Yeh moment steering wheel ko rotate karne ki koshish karega (jaise gaadi turn karte waqt).
+```
+Step 1: Characteristic equation
+det(|2-λ   1|) = 0
+    |1    2-λ|)
 
-**Final Answer:** Couple Moment = 6 N·m
+(2-λ)² - 1 = 0
+λ² - 4λ + 3 = 0
+
+Step 2: Solve quadratic
+λ = [4 ± √(16-12)]/2 = [4 ± 2]/2
+λ₁ = 3, λ₂ = 1
+```
+**Answer:** Eigenvalues = 3, 1
 
 ---
 
-**Numerical 4: System of Forces & Resultant (2-D)**
+## **📙 UNIT 3: Structural Analysis**
 
-**Problem:** Ek particle par teen forces kaam kar rahi hain:
-- F1 = 10 N, Right side (+x axis)
-- F2 = 15 N, 30° angle par up from right (+x axis)
-- F3 = 5 N, Downward (-y axis)
-Resultant force find karo.
+### **5. Truss - Method of Joints**
+**Problem:** Find force in member AB of truss with load 1000 N at joint B.
+
+```
+    A
+    /\
+   /  \
+  /    \
+B-------C
+  1000 N↓
+```
 
 **Solution:**
-1.  **Components Nikalo:**
-    - F1x = 10 N, F1y = 0 N
-    - F2x = 15 * cos(30°) = 15 * 0.866 = 12.99 N
-    - F2y = 15 * sin(30°) = 15 * 0.5 = 7.5 N
-    - F3x = 0 N, F3y = -5 N
+```
+Step 1: Support reactions
+By symmetry: R_A = R_C = 500 N ↑
 
-2.  **Components Sum Karo:**
-    - ΣFx = 10 + 12.99 + 0 = **22.99 N**
-    - ΣFy = 0 + 7.5 - 5 = **2.5 N**
+Step 2: Joint A analysis
+ΣFy = 0: AB × sin60° = 500
+AB = 500/sin60° = 577.35 N (Compression)
+```
+**Answer:** Force in AB = 577.35 N (Compressive)
 
-3.  **Resultant Force (R) Nikalo:**
-    - Magnitude: R = √[(ΣFx)² + (ΣFy)²] = √[(22.99)² + (2.5)²] ≈ √[528.54 + 6.25] ≈ √534.79 ≈ **23.12 N**
-    - Direction (θ from x-axis): θ = tan⁻¹(ΣFy / ΣFx) = tan⁻¹(2.5 / 22.99) ≈ tan⁻¹(0.1087) ≈ **6.2°**
+---
 
-**Final Answer:** Resultant Force ≈ 23.12 N, 6.2° angle par up from the horizontal.
+### **6. Zero Force Members**
+**Problem:** Identify zero force members:
 
+```
+    A---B---C
+    |   |   |
+    D---E---F
+        ↓
+        P
+```
+
+**Solution:**
+```
+Rule 1: Joint C - Members BC & CF only, no load ⇒ Both zero force
+Rule 2: Joint B - AB, BC, BE; BC zero ⇒ Check BE...
+Continue analysis...
+```
+**Answer:** BC, CF are zero force members
+
+---
+
+## **📒 UNIT 4: Centroid & Moment of Inertia**
+
+### **7. Centroid of Composite Area**
+**Problem:** Find centroid of T-section:
+- Flange: 200mm × 50mm
+- Web: 50mm × 150mm
+
+**Solution:**
+```
+Step 1: Divide into two rectangles
+A₁ = 200×50 = 10000 mm², y₁ = 175 mm
+A₂ = 50×150 = 7500 mm², y₂ = 75 mm
+
+Step 2: Find centroid
+ȳ = (A₁y₁ + A₂y₂)/(A₁ + A₂)
+   = (10000×175 + 7500×75)/17500
+   = (1750000 + 562500)/17500 = 132.14 mm
+```
+**Answer:** Centroid = 132.14 mm from base
+
+---
+
+### **8. Moment of Inertia**
+**Problem:** Find Ixx of rectangle 200mm × 100mm about centroid.
+
+**Solution:**
+```
+Ixx = bh³/12 = 200 × 100³/12 
+     = 200 × 1000000/12 
+     = 200000000/12 = 16,666,667 mm⁴
+```
+**Answer:** Ixx = 16.67 × 10⁶ mm⁴
+
+---
+
+### **9. Parallel Axis Theorem**
+**Problem:** Find Ixx of above rectangle about base.
+
+**Solution:**
+```
+I_base = I_centroid + A × d²
+       = 16,666,667 + (200×100) × 50²
+       = 16,666,667 + 20000 × 2500
+       = 16,666,667 + 50,000,000 = 66,666,667 mm⁴
+```
+**Answer:** I_base = 66.67 × 10⁶ mm⁴
+
+---
